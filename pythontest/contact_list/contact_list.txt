@@ -1,0 +1,6 @@
+lifeng	male	IT
+ii	female	Sale
+mxm	male	it
+mxm	female	sale
+wxm1	female	IT
+lili	female	sale
