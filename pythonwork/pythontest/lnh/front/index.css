@@ -1,0 +1,230 @@
+/*
+此CSS用于XXX页面
+maxm
+2020/2/4
+*/
+
+/*全局通用的样式*/
+/*通用选择器*/
+* {
+    /*设置浏览器背景色*/
+    /*background-color: black;*/
+    font-family: "Microsoft YaHei UI","微软雅黑","Arial";
+    font-size: 18px;
+    color: black;
+
+    /*防止不同浏览器自带的边距影响*/
+    /*margin: 0px;*/
+    /*padding: 10px 10px;*/
+}
+
+
+/*标签选择器*/
+a {
+    text-decoration: none;
+    color: rgba(255,0,0,0.8);
+    font-size:20px;
+    font-weight: bolder;
+}
+
+a:hover {
+    color: blue;
+}
+h1 {color: green}
+
+li {
+    width: 300px;
+}
+
+
+/*ID选择器*/
+#h1_2 {
+    color: yellow;}
+
+#a10 {
+    display: block;
+    padding: 10px 10px;
+    background-color: green;
+    width: 80px;
+}
+#a10:hover {
+    background-color: deeppink;
+}
+/*类选择器  应用最多*/
+.c1 {
+    color: red;
+}
+.c2 {
+    text-indent: 32px;
+}
+
+.c3 {
+    width: 600px;
+    height: 300px;
+    border: 1px solid red;
+    background-image: url(img/huluwa.png);
+    /*图片是否重复*/
+    /*background-repeat: repeat-x;*/
+    background-repeat: no-repeat;
+    /*图片的位置*/
+    background-position: 50% 50%;
+}
+
+
+.c4 {
+    height: 300px;
+    background: url("img/big.jpg") no-repeat 0% 0%;
+    /*把背景图固定*/
+    background-attachment: fixed;
+}
+
+.c7 {
+    height: 300px;
+    background: url("img/1250_550.png") no-repeat 0% 0%;
+    /*把背景图固定*/
+    background-attachment: fixed;
+}
+
+.c6 {
+    background-color: #1deee9;
+    list-style-type: none;
+    padding-left: 0px;
+}
+.c6 li {
+    margin: 0 auto;
+}
+
+.div_menubar {
+    background-color: #858585;
+    height: 50px;
+    padding-top: 15px;
+}
+.c5 {
+    height: 40px;
+    width: 50%;
+    /*display: inline;*/
+    /*background-color: #858585;*/
+    padding-top: 10px;
+    padding-left: 0px;
+}
+ul.c5>li{
+    display: inline;
+    border-right: 2px solid #d6d6d6;
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+ul.c5 li.lastli {
+   border-right: none;
+}
+
+/*方形头像*/
+.touxiang1 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    color: #eeeeee;
+}
+.touxiang1>img {
+    max-width: 100%;
+}
+/*圆形头像*/
+.touxiang2 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.touxiang2>img {
+    max-width: 100%;
+}
+
+/*交通红绿灯*/
+.jiaotong {
+    width: 110px;
+    border: 3px solid #232323;
+    background-color: #232323;
+}
+.jred,
+.jyellow,
+.jgreen{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin: 5px;
+}
+
+.jred {
+    background-color: red;
+}
+.jyellow {
+    background-color: yellow;
+}
+.jgreen {
+    background-color: green;
+}
+
+.gotop {
+    background-color: #858585;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+/*儿子标签*/
+ul>li {
+    color: yellow;
+}
+
+li>a {
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+/*属性标签*/
+[start] {
+    color: red;
+}
+
+[start="3"] {
+    color: green;
+}
+
+/*分组标签*/
+dt,
+th{
+    color: blue;
+}
+
+/*伪类选择器*/
+input:focus {
+  outline: none;
+  background-color: #eee;
+}
+
+/*伪元素选择器*/
+p:before {
+    content: '*';
+    color: red;
+}
+
+
+[class^="c1"] {
+    color: purple;
+}
+
+[class$="0"] {
+    color: yellow;
+}
+
+/*导航条样式*/
+
+
+/*
+商品列表样式
+ */
+
+
+
+

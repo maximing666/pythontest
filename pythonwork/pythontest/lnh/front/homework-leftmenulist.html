@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: #8b8b8b;
+        }
+
+        .left_menu {
+            width: 20%;
+            height: 1000px;
+            background-color: gray;
+            text-align: center;
+        }
+
+        .c1 {
+            border: 1px solid;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="d1" class="left_menu">
+    <div class="c1" id="d1-1">菜单一</div>
+    <ul class="hidden" id="u1">
+        <li><a href="">11</a></li>
+        <li><a href="">22</a></li>
+        <li><a href="">33</a></li>
+    </ul>
+    <div class="c1" id="d1-2">菜单二</div>
+    <ul class="hidden" id="u2">
+        <li><a href="">11</a></li>
+        <li><a href="">22</a></li>
+        <li><a href="">33</a></li>
+    </ul>
+    <div class="c1" id="d1-3">菜单三</div>
+    <ul class="hidden" id="u3">
+        <li><a href="">11</a></li>
+        <li><a href="">22</a></li>
+        <li><a href="">33</a></li>
+    </ul>
+</div>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    // 方法一： ul先全隐藏
+    // $(".c1").click(function () {
+    //     $(this).siblings("ul").addClass("hidden");
+    //     $(this).next().toggleClass("hidden");
+    // });
+    // 方法二： ul先全显示
+    // $(".c1").click(function () {
+    //     $(this).siblings("ul").removeClass("hidden");
+    //      // 不是所选菜单相邻的ul隐藏
+    //     $(this).siblings("ul").not($(this).next()).toggleClass("hidden");
+    // });
+
+    $(".c1").click(function () {
+        $(this).siblings("div").next("ul").add("hidden");
+        $(this).next("ul").toggleClass("hidden");
+    })
+</script>
+</body>
+</html>

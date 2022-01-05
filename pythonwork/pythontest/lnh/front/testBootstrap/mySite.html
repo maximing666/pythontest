@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="toastr/toastr.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网站</title>
+    <style>
+        body {
+            background-color: #eeeeee;
+            padding-top: 70px;
+        }
+
+        div {
+            /*border: 1px solid blue;*/
+        }
+
+        img {
+            width: 975px;
+            text-align: left;
+        }
+
+        #commentId {
+            background-color: #f6f6f6;
+        }
+
+        #commentId > div {
+            border-bottom: 1px solid #eeeeee;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--导航条-->
+    <div class="row">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">运维世界</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">资产管理<span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">运行监控</a></li>
+                        <li><a href="#">线上操作</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">登录/注册</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true"
+                               aria-expanded="false">关于我们 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+
+    <div class="row">
+        <!--左侧菜单栏-->
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active"><a href="#">机房信息<span class="badge">100</span></a></li>
+                <li role="presentation"><a href="#">网络设备<span class="badge">90</span></a></li>
+                <li role="presentation"><a href="#">主机信息<span class="badge">150+</span></a></li>
+            </ul>
+        </div>
+
+        <!--右侧内容-->
+        <div class="col-md-10">
+
+            <!--轮播图-->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item">
+                        <img data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide [900x500]"
+                             src="http://www.yunweipai.com/wp-content/uploads/2017/07/1.webp_6.jpg"
+                             data-holder-rendered="true">
+                    </div>
+                    <div class="item active">
+                        <img data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide [900x500]"
+                             src="http://www.yunweipai.com/wp-content/uploads/2017/07/21.webp_6.jpg"
+                             data-holder-rendered="true">
+                    </div>
+                    <div class="item">
+                        <img data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide [900x500]"
+                             src="http://www.yunweipai.com/wp-content/uploads/2017/07/22.webp_6.jpg"
+                             data-holder-rendered="true">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+            <!--具有响应式的嵌入式内容-->
+            <!-- 4:3 aspect ratio -->
+            <!--<div class="embed-responsive embed-responsive-4by3">-->
+            <!--<iframe class="embed-responsive-item" src="https://v.qq.com/x/page/x05272sihxw.html"></iframe>-->
+            <!--</div>-->
+
+
+            <!--图片-->
+            <!--<div class="row">-->
+            <!--<div class="text-center">-->
+            <!--<img src="https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike150%2C5%2C5%2C150%2C50/sign=fe51b186b299a9012f3853647cfc611e/0df3d7ca7bcb0a46137ee6ab6163f6246a60afc0.jpg"-->
+            <!--alt="">-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--缩略图-->
+            <div class="row">
+                <div class="row">
+                    <h3>运维图例</h3>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582368652858&di=ade10a1209dc8838182d8f4153a0a262&imgtype=0&src=http%3A%2F%2Fwww.qqcjw.com%2FUploadFiles%2F2019-7-4%2F6369783461859657949413795.png"
+                                 alt="...">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582369209537&di=f7d8b38250bec31e63ad6112f10524d7&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fc86b589495b6d7793afd24af264cedddfbed05f75da4d-w5XXHZ_fw658"
+                                 alt="...">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582369209537&di=69bbe3459b098bebb27e0c41d291b423&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fee5241b1f7cca34a90977b469de37e7ab8c30fcf611da-s92ckF_fw658"
+                                 alt="...">
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <a href="#" class="thumbnail">
+                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582369335501&di=3a8513e036db16fb21bd978ccce967a7&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F37ce0699e996cf7ed51dcdaef7a384d22145985f6f2c8-OgiAGQ_fw658"
+                                 alt="...">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--运维名人堂-->
+            <div class="row">
+                <div class="row">
+                    <h3>名人堂</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="http://file.elecfans.com/web1/M00/7B/09/o4YBAFwBF7SAciN7AADZjHoBUpw058.jpg"
+                                 alt="...">
+                            <div class="caption">
+                                <h4>艾伦·麦席森·图灵</h4>
+                                <p>艾伦·麦席森·图灵（1912－1954）计算机科学之父，人工智能之父。</p>
+                                <p class="text-center"><a href="#" class="btn btn-primary" role="button">膜拜</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img style="width: 215px;height: 140px;"
+                                 src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582370502751&di=4a6fa867b457c50218501b9988fab4de&imgtype=0&src=http%3A%2F%2Fwww.mux5.com%2Fpicture%2F8ad485308e6a088bcc94fb2ac72576f5.jpg"
+                                 alt="...">
+                            <div class="caption">
+                                <h4>马文·明斯基</h4>
+                                <p>马文·明斯基（1927-2016）是“人工智能之父”和框架理论的创立者。</p>
+                                <p class="text-center"><a href="#" class="btn btn-primary" role="button">膜拜</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img src="http://file.elecfans.com/web1/M00/7B/08/o4YBAFwBFveAekvDAAAekSEWDYo291.png"
+                                 alt="...">
+                            <div class="caption">
+                                <h4>约翰·麦卡锡</h4>
+                                <p>约翰·麦卡锡他发明了人工智能领域的首要语言Lisp，被称为“人工智能之父”。</p>
+                                <p class="text-center"><a href="#" class="btn btn-primary" role="button">膜拜</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <div class="thumbnail">
+                            <img style="width: 215px;height: 140px;"
+                                 src="http://file.elecfans.com/web1/M00/7B/76/pIYBAFwBF2mAQQyPAAA2P0_Xfjw092.png"
+                                 alt="...">
+                            <div class="caption">
+                                <h4>冯·诺依曼</h4>
+                                <p>冯·诺依曼（1903-1957），被后人称为“计算机之父”和“博弈论之父”。</p>
+                                <p class="text-center"><a href="#" class="btn btn-primary" role="button">膜拜</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--评论-->
+            <div id="commentId" class="row">
+                <div>
+                    <h3>评论区</h3>
+                </div>
+                <div class="media-list">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img style="width: 50px;height: 50px" class="media-object"
+                                     src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582377589322&di=0cb418ebd1e12d96b0e080556444d243&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201607%2F30%2F20160730144641_4UMvr.thumb.700_0.jpeg"
+                                     alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">野原新之助</h4>
+                            大家好，我是小新。动感超人，哈哈哈！
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img style="width: 50px;height: 50px" class="media-object"
+                                             src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=70eaee0da686c9171c0e5a6ba8541baa/03087bf40ad162d917f368e910dfa9ec8a13cd22.jpg"
+                                             alt="...">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading">野原美伢</h4>
+                                    小新，，，快去打酱油！！
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img style="width: 50px;height: 50px" class="media-object"
+                                     src="https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike72%2C5%2C5%2C72%2C24/sign=acaef067b1003af359b7d4325443ad39/d000baa1cd11728bdd6d9c4ccffcc3cec3fd2c1f.jpg"
+                                     alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">野原广志</h4>
+                            哈哈，今天可以去野餐了。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--分页-->
+            <div class="row">
+                <div class="col-md-10 text-center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <nav aria-label="...">
+                        <ul class="pager">
+                            <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> 上一页</a></li>
+                            <li class="next"><a href="#">下一页 <span aria-hidden="true">&rarr;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!--模态框-->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <label for="">用户名：<input type="text"></label>
+                        </div>
+                        <div>
+                            <label for="">密&nbsp;&nbsp;&nbsp;码：<input type="password"></label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="../jquery-3.4.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="toastr/toastr.min.js"></script>
+<script>
+    // 轮播图的间隔时间
+    $('.carousel').carousel({
+        interval: 3000
+    })
+
+    // 定时提醒
+    function myToastr() {
+        toastr["success"]("福如东海，寿比南山！")
+    }
+    setInterval(myToastr,60000);
+
+</script>
+</body>
+</html>
